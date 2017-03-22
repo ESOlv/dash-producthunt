@@ -3,10 +3,14 @@
 
 <!-- HTML -->
 <template>
+  <!-- <span>{{ this.$route.params.postId }}</span> -->
 
-<div>
+<div class="wrapper">
 	<span>POST</span>
-	<span>{{ this.$route.params.postId }}</span>
+
+  <div>{{ this.detailledpost.name }}</div>
+  <img :src="detailledpost.thumbnail.image_url" />
+  <div>{{ this.detailledpost.tagline }}</div>
 	
 </div>
 
@@ -26,7 +30,7 @@
 
     data() {
       return {
-        post: null,
+        detailledpost: [],
       }
     },
 
@@ -40,14 +44,12 @@
 
       getPost() {
         // Utilisez axios pour récupérer les posts de l'API ProductHunt
-        // Variable à modifier : this.posts
         console.log('getPost...')
 
-        //get route ProductHunt, selectedDay => daysAgo
-        axios.get('/v1/posts/1')
+        axios.get(`/v1/posts/${this.$route.params.postId}`)
           .then((response) => {
             console.log(response)
-            this.post = response
+            this.detailledpost = response.data.post
 
           })
           .catch(function (error) {
