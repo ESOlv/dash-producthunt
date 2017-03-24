@@ -1,0 +1,94 @@
+// Import des variables css (à charger dans chaque composant si besoin)
+@import '~css/variables'
+
+.post-header
+	margin-top 40px
+	margin-bottom 30px
+	background-color: $white
+	display: flex
+	align-content: center
+	border-radius: 2px
+	box-shadow: 2px 2px 8px $gray-gray
+	.post-header-img
+		display: inline-block
+		height: 200px
+		img
+			height: 200px
+			width: 200px
+	.post-header-infos
+		padding: 10px
+		h1
+			padding: 2px 10px
+	.post-header-infos__tagline
+		padding: 10px
+		color $gray-gray
+		margin-top 10px
+	.post-header-infos-hunter
+		font-size 1em
+		padding: 10px
+		.post-header-infos-hunter__label
+			display: inline-block
+		.post-header-infos-hunter__name
+			display: inline-block
+			padding: 0 10px
+			color $gray-gray
+			
+	.post-header-infos-makers
+		padding: 0 10px
+		display: inline-block
+		.post-header-infos-makers__title
+			display: inline-block
+		.post-header-infos-makers-list
+			display: inline-block
+			li
+				color $gray-gray
+				display: inline-block
+				font-size 1em
+				padding: 10px
+
+.post-infos
+	text-align: center
+	.post-infos-stats
+		.post-infos-stats-votes, .post-infos-stats-comments
+			display: inline-block
+			padding: 10px
+			margin: 10px 20px
+		.post-infos-stats-votes__number, .post-infos-stats-comments__number
+			display: inline-block
+			font-size: 2em
+			font-weigth: 300
+	.post-infos-topics
+		.post-infos-topics-list
+			li
+				display: inline-block
+				background-color: $white
+				padding: 10px
+				margin: 5px
+				text-transform: uppercase
+				
+.post-content
+	padding: 30px 0
+	text-align: center
+	.post-content-slider
+		padding: 10px 0
+		background-color: $white
+		text-align: center
+		width: 100%
+		display: flex
+		overflow-y: scroll
+		flex-wrap: nowrap
+		.post-content-slider-slide
+			padding: 0 10px
+				
+			.post-content-slider-slide__img
+				display: block
+				margin: auto
+				height: 400px
+				img
+					display: block
+					margin: auto
+					height: 100%
+
+.post-comments
+	.post-comments-body
+		padding: 20px 0;
