@@ -12,6 +12,12 @@
 		  	<h2>{{ post.name }}</h2>
 			<div class="posts-list-item-legend__upvotes">{{ post.votes_count }} upvotes</div>
 			<div class="posts-list-item-legend__tagline">{{ post.tagline }}</div>
+			<div class="posts-list-item-legend-topic">
+				<div class="posts-list-item-legend-topic__legend">Topics:</div>
+				<ul class="posts-list-item-legend-topic-list">
+					<li v-for="topic in this.post.topics" :value='topic' class="posts-list-item-legend-topic-list__item"><a href="">#{{ topic.name }}</a></li>
+				</ul>
+			</div>
 		</div>
 	</router-link>
   </li>
